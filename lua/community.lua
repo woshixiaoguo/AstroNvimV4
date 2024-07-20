@@ -11,8 +11,11 @@ return {
   -- import/override with your plugins folder
 
   -- colorscheme
-  -- { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
 
   -- project
   { import = "astrocommunity.project.project-nvim" },
+
+  -- java
+  { import = "astrocommunity.pack.java" },
 }
