@@ -117,7 +117,7 @@ return {
       -- },
       mappings = {
         n = {
-          ["<leader>j"] = { desc = "JDT" },
+          ["<leader>j"] = { desc = " JDT" },
           ["<leader>jj"] = { function() jdtls.test_class() end, desc = "Test class (DAP)" },
           ["<leader>jk"] = { function() jdtls.test_nearest_method() end, desc = "Test method (DAP)" },
 
