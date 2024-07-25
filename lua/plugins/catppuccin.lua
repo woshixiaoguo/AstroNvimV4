@@ -1,3 +1,4 @@
+local colors = require "catppuccin.palettes.mocha"
 return {
   "catppuccin",
   opts = {
@@ -20,9 +21,11 @@ return {
     -- https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md
     custom_highlights = function(colors)
       return {
-        Comment = { fg = colors.teal },
+        Comment = { fg = colors.flamingo },
         LineNr = { fg = colors.subtext0 },
-        TabLineSel = { bg = colors.pink },
+        CursorLine = { bg = colors.surface2 },
+        -- CursorLine = { bg = colors.subtext1 },
+        -- TabLineSel = { bg = colors.pink },
       }
     end,
     native_lsp = {
