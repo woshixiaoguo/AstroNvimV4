@@ -56,12 +56,14 @@ return {
         -- so we don't need to put a parameter for this function
         init = function()
           local get_hlgroup = require("astroui").get_hlgroup
+          local colors = require "catppuccin.palettes.latte"
           -- get highlights from highlight groups
           local normal = get_hlgroup "Normal"
           local fg, bg = normal.fg, normal.bg
           local bg_alt = get_hlgroup("WinBar").bg
-          local green = get_hlgroup("String").fg
+          -- local green = get_hlgroup("String").fg
           local red = get_hlgroup("Error").fg
+          local green = colors.teal
           -- return a table of highlights for telescope based on
           -- colors gotten from highlight groups
           return {
