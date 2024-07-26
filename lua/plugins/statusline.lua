@@ -1,3 +1,4 @@
+local palettes = require "catppuccin.palettes.mocha"
 ---@type LazySpec
 return {
   {
@@ -21,10 +22,10 @@ return {
           local get_hlgroup = require("astroui").get_hlgroup
           -- use helper function to get highlight group properties
           local comment_fg = get_hlgroup("Comment").fg
-          hl.git_branch_fg = comment_fg
-          hl.git_added = comment_fg
-          hl.git_changed = comment_fg
-          hl.git_removed = comment_fg
+          hl.git_branch_fg = palettes.teal
+          hl.git_added = palettes.green
+          hl.git_changed = palettes.yellow
+          hl.git_removed = palettes.red
           hl.blank_bg = get_hlgroup("NonText").fg
           hl.file_info_bg = get_hlgroup("DiagnosticVirtualTextInfo").bg
           hl.nav_icon_bg = get_hlgroup("String").fg
@@ -41,9 +42,11 @@ return {
           hl.tab_active_bg = hl.bg
           hl.tab_visible_bg = hl.bg
 
+          hl.buffer_fg = palettes.subtext0
           hl.buffer_bg = hl.bg
-          -- hl.buffer_active_bg = "#a7adc6"
+          hl.buffer_active_fg = palettes.lavender
           hl.buffer_active_bg = hl.blank_bg
+          -- hl.buffer_active_bg = "#a7adc6"
           hl.buffer_visible_bg = hl.bg
           -- hl.buffer_visible_close_fg = hl.blank_bg
 
